@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_23746_batch_in_0_updates_to_install.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+    <g:evaluate>
+        var apps = new GlideAggregate("x_23746_batch_in_0_st_available_update");
+        apps.addQuery('available_version', 'IN', '${sysparm_app_versions}');
+        apps.groupBy('name');
+        apps.groupBy('level');
+        apps.orderBy('level');
+        apps.orderBy('name');
+        apps.setGroup(true);
+        apps.query();
+    </g:evaluate>
+
+    <h3>${gs.getMessage('The following applications will be upgraded:')}</h3>
+    <ul>
+    <j:while test="${apps.next()}">
+        <li>${apps.getValue('name')} - ${apps.getValue('level')}</li>
+    </j:while>
+    </ul>
+    <g:ui_form>
+        <input type="hidden" name="app_versions" value="${sysparm_app_versions}" />
+        <input type="hidden" name="app_count" value="${apps.getRowCount()}" />
+        <div class="form-group pull-right" style="padding-right: 20px;">
+            <g:dialog_buttons_ok_cancel ok="return actionOK()" cancel="return onCancel()" ok_text="${gs.getMessage('Install Updates')}" ok_id="ok_button" cancel_type="button" />
+        </div>
+    </g:ui_form>
+</j:jelly>]]></html>
+        <name>updates_to_install</name>
+        <processing_script><![CDATA[UpBegin();
+function UpBegin() {
+        var progress_id = '-1';
+        var status_message = '';
+
+        try {
+            var inputs = {};
+            inputs['apps'] = app_versions; // String 
+            var result = sn_fd.FlowAPI.getRunner().subflow('x_23746_batch_in_0.batch_install_updates').inForeground().withInputs(inputs).run();
+            var outputs = result.getOutputs();
+            progress_id = outputs['progress_id'];
+            status_message = outputs['status_message'];
+
+        } catch (ex) {
+            var message = ex.getMessage();
+            status_message = message;
+            gs.addErrorMessage(progress_id + ' - ' + message);
+        }
+    //var session = gs.getSession();
+    //var URL = session.getUrlOnStack();
+    var URL = 'x_23746_batch_in_0_installing_updates.do?';
+    URL += "&sysparm_pworker_sysid=" + progress_id + "&sysparm_message=" + status_message;
+    URL += "&sysparm_app_count=" + app_count;
+    URL += "&sysparm_app_versions=" + app_versions;
+    response.sendRedirect(URL);
+}]]></processing_script>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-11-29 19:38:51</sys_created_on>
+        <sys_id>9ca322abc30ade108dbc32f1b40131e7</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>updates_to_install</sys_name>
+        <sys_package display_value="Batch Installer for Store Updates" source="x_23746_batch_in_0">11aba50dc3cad2108dbc32f1b4013123</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_update_name>sys_ui_page_9ca322abc30ade108dbc32f1b40131e7</sys_update_name>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-11-29 19:58:56</sys_updated_on>
+    </sys_ui_page>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>9ca322abc30ade108dbc32f1b40131e7</id>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-11-29 19:38:50</sys_created_on>
+        <sys_id>b3c36663c38ade108dbc32f1b4013109</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-11-29 19:38:50</sys_updated_on>
+        <table>sys_ui_page</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

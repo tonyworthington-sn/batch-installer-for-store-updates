@@ -1,0 +1,1180 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=1034491000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>batch_install_updates</internal_name>
+        <label_cache>[{"name":"03269075-877e-4e13-88ca-8c621452317c.status_message","label":"3 - Batch Install➛Status Message","reference_display":"Status Message","type":"string","base_type":"string","usedInstances":{"a5b9fc24-afea-43f1-b076-d464652b9bc7":["status_message-1"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"565282e5-1ee6-4b04-9a6b-7a6d47a4da5b"}},{"name":"03269075-877e-4e13-88ca-8c621452317c.progress_id","label":"3 - Batch Install➛Progress ID","reference_display":"Progress ID","type":"string","base_type":"string","usedInstances":{"a5b9fc24-afea-43f1-b076-d464652b9bc7":["progress_id-0"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"93f6a70e-6c6b-4246-8d9a-b5bb1b1dee5d"}},{"name":"flow_variable.batch_manifest","label":"Flow Variables➛Batch Manifest","reference":"","reference_display":"","type":"json","base_type":"json","usedInstances":{"03269075-877e-4e13-88ca-8c621452317c":["batch_plan"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"34500424-8cc0-4bf8-85cb-99d730a3756e"}},{"name":"subflow.apps","label":"Input➛Applications","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"7bc855c3-e50f-4e00-9372-99ce90422b19":["conditions"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"989ef74b-150f-4dfd-8156-febc2ea0c514","sourceUiUniqueId":"","sourceType":"","sourceId":""}}]</label_cache>
+        <master_snapshot>5c7b5b74c3da56508dbc32f1b401317b</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Batch Install Updates</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-11-21 21:32:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3a21f105c30ed2108dbc32f1b401318d</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Batch Install Updates</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Batch Installer for Store Updates" source="x_23746_batch_in_0">11aba50dc3cad2108dbc32f1b4013123</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_update_name>sys_hub_flow_3a21f105c30ed2108dbc32f1b401318d</sys_update_name>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:21</sys_updated_on>
+        <type>subflow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=3a21f105c30ed2108dbc32f1b401318d"/>
+    <sys_variable_value action="delete_multiple" query="document_key=3a21f105c30ed2108dbc32f1b401318d"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_3a21f105c30ed2108dbc32f1b401318d^id=3a21f105c30ed2108dbc32f1b401318d"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=3a21f105c30ed2108dbc32f1b401318d"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=3a21f105c30ed2108dbc32f1b401318d^sys_idNOT INfe21f105c30ed2108dbc32f1b401318f"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>3a21f105c30ed2108dbc32f1b401318d</id>
+        <name>Batch Install Updates</name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-11-21 21:32:47</sys_created_on>
+        <sys_id>fe21f105c30ed2108dbc32f1b401318f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-11-21 21:32:47</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=fe21f105c30ed2108dbc32f1b401318f"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=3a21f105c30ed2108dbc32f1b401318d^sys_idNOT INf5662191c38e16108dbc32f1b4013170"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=989ef74b-150f-4dfd-8156-febc2ea0c514</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>apps</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Applications</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Batch Install Updates">3a21f105c30ed2108dbc32f1b401318d</model>
+        <model_id>3a21f105c30ed2108dbc32f1b401318d</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_3a21f105c30ed2108dbc32f1b401318d</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-11-22 15:24:14</sys_created_on>
+        <sys_id>f5662191c38e16108dbc32f1b4013170</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-11-22 15:24:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f5662191c38e16108dbc32f1b4013170"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=3a21f105c30ed2108dbc32f1b401318d^sys_idNOT IN86662d91c38e16108dbc32f1b401314e,b9662d91c38e16108dbc32f1b401314a"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=f34fb131-5b0a-47a4-8629-04403f9dbd5a</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>status_message</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Status Message</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Batch Install Updates">3a21f105c30ed2108dbc32f1b401318d</model>
+        <model_id>3a21f105c30ed2108dbc32f1b401318d</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_3a21f105c30ed2108dbc32f1b401318d</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-11-22 15:24:14</sys_created_on>
+        <sys_id>86662d91c38e16108dbc32f1b401314e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-11-22 15:24:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=86662d91c38e16108dbc32f1b401314e"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=966ca7dd-d533-4b94-80bf-5426f4977366</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>progress_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Progress ID</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Batch Install Updates">3a21f105c30ed2108dbc32f1b401318d</model>
+        <model_id>3a21f105c30ed2108dbc32f1b401318d</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_3a21f105c30ed2108dbc32f1b401318d</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-11-22 15:24:14</sys_created_on>
+        <sys_id>b9662d91c38e16108dbc32f1b401314a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-11-22 15:24:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b9662d91c38e16108dbc32f1b401314a"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3a21f105c30ed2108dbc32f1b401318d"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=3a21f105c30ed2108dbc32f1b401318d"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=3a21f105c30ed2108dbc32f1b401318d^sys_idNOT IN42662d91c38e16108dbc32f1b401315b,8a662d91c38e16108dbc32f1b401315e"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Batch Install Updates">3a21f105c30ed2108dbc32f1b401318d</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-11-22 15:24:14</sys_created_on>
+        <sys_id>42662d91c38e16108dbc32f1b401315b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:39</sys_updated_on>
+        <ui_id>7bc855c3-e50f-4e00-9372-99ce90422b19</ui_id>
+        <values>H4sIAAAAAAAA/+VXTWvjMBD9K8FnE+wmTbu9lYZCoR/Qll5KEbIkJ2IV2SvJSdOQ/74jS3aM42YTSKFlj5oZSW9m3hvLr6uA0+AiOE+HUYTj0/OzKBoMomg0GhAcJ8lgRJIoGSZBGEg8YxBpcCIYLOdYFHatlxrhPEdzpjTPJHgo17nAyxcfcJnnghNswNl7qYPIlAuqmAwuXt/CIMcKTjdMBRerlmtfeAInTEDos8fXgmuWeb1Epc/ZbpvbevfOkSlqoURhwN4Nk5QBhhQLzcJghiXFJlPL2qIYpg9SbAxTLg2cGNjgd80/4N7zyMalDLIizPnqZXnz2NXMudIxNvjJqIKYQvlwMs04YdrVhLIUF8JcNW0u4CG3dXZbXOpudyaKmbx3JQnqA6oWgaXQDFGW22Qtep9K+jTNFo8V0msuy7p4p8gIFvUKG6N4UhiLZxUwwWZwEJoBNbicoFxlc15uBiyz/kTAop+KbAGXaj6RfUws8D7UFvevwT4uzS9YcZvFHRwDmwEQF8AS5Nqos0KV5ZwjIgpdOhSW2p0VrENLziuBtd5kDmVHfwqL29XBZ4xc0ewWonhuLuGIOfPJrcO9VHIabWhHMkm5RaFbUuH05n610kVik+9DWnq93tbMjshjCqdEXAnnqgm5Kw0voS3bbdcBXkLx0SQEefw0EcHl309Dh6vCleAf0iBnO4l2uuGUzpRBrpYNbfiR3NKBtx7G+T2gVJx/sCztJcvP0HnKp5wJ2vXVuLaO1lfj5P/9anxLwgMgilwHuRRcls8AAPpVSoh2j9xfLa6VFGt8I6wNa7KtBdwzWe/jYDXsAadSwxPc3Xt2eDogVvO/pEx79ldGL4LB0UQwODmeCFZ1qnUxO+pevf5sR6v4DxuP2/FAw8aGeN0lsoPujA+982S9LeLBQSpuEs55xp/w7shPxE9UGX7lGJjCVn8fchpGC04nzGxur6JoZhZY/O7ye2GiqlFlel/w3BzulO4o3sgU1IIU09C85nszhifT9hyJQ2c+bIzsgaUqxx1+7z3WYDoR+lECameTsjfNWXJTWz3Jh0d8RH7rL2rVsE4dVn37EX9qxxPD21/LlrjGoxAAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Batch Install">89f446ebc3031010ca199a038a40dd7b</action_type>
+        <action_type_parent display_value="Batch Install">468535e3c3031010ca199a038a40dd3d</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>89f446ebc3031010ca199a038a40dd7b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Batch Install Updates">3a21f105c30ed2108dbc32f1b401318d</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-11-22 15:24:14</sys_created_on>
+        <sys_id>8a662d91c38e16108dbc32f1b401315e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:39</sys_updated_on>
+        <ui_id>03269075-877e-4e13-88ca-8c621452317c</ui_id>
+        <values>H4sIAAAAAAAA/+2WW2/bNhTHv4qhpw21XEqibu5TliBAhq4J4jYvTSFQvNgcaEqlKCee4e++I0uW7dyWAEaAYXvk0SH5P5cfj76vHMmcsYOZwDjiOQ1Q4CEPUeKlKUFBQjBiLKbO0NFkzsEzJ5bOslIRDbYFUXVjXK2EKu6yBTGS5IqPWqc50VLwyq7X4MpkBZuWN6/fQWdSMcO1M/7+Y+iUxIAAy40zXj349NoIFMm5AtffmrsGV20IT4Vll2Vj+7MqtqvP3dbfJ5dfwFQY1gjxhg6/t1wzDgoEURUfOhACI7YwS2dsTQ0Gwwm71GrZe8yktnCU0/jeV/IvuAojhBpPwSEoytuv/fJrk6GzNn/tJ3FGLJnA+dTWpnOns0JSXrUpYVyQWtnTfVvrcFlaCWFtttjm4G53oeq5/tImw+kP2JYLLHXFM8bLJtpGfxeMmMyKu+ut0nOpN4npPqqCEtWviLVG5rVt9KycWn49yHK7fpBnrvgcboO+KEupp1lpioXc3ACC56OpgsVo00iMV3KqR4Q20Y2gAmR0Dvazjfmm67I/4BjY3Fz2TcufNb9oOicKcYq9lLhhSrmLfT91kyiOXBIjTyRhmqZ54qyHTrWsThWpql2SoELZz7oJsU1Zl5yszW+zhRpZ2hMQteB9Hlpjk4O9poPVE87r9XrYEYpe7O/E37UyNbxRIYnKiJKk2uOU8zxhcYxowEgYhShhcJ4vvBwjL/C8/DGn95kfxDjKWqlSZ2hEJWUZdIN5M6OviGHL6GkfxOCkC+L58Dped/wcQnu9Z+/I9Y9FbuAfcgtN0st6DuDTQmu+adTBbY2QHw0eRsur40O+r+wdaBcTTgydnUuumtJD/Z99AfbrdvgM7FfuXd6CNPG9KPeoCxPDc3HMIzfFHLl+LpgQoUej2D/eW7CDO30RDLLrfqkrSyAhWW3UHtiPwX07nP+sYQvnRSdi8O3687PSOigrKLmePiBysjV2OAbHwjH5Dw/SPtOHDPW5fheAQpKLlMa5m1JMXIx97BIvwC4MUZL6KIBZQ48CUNsTu1l60H2PpumhN2BjBtsNmzc4YINpNZpye2UKiMouf9m8zHF/atPjrenXT7facGgXeL2dmbVlNf748dYZfNid+AG+jGBALqBNXF3cjSC/4PLJ2ZvneZLC2I09JHDgA27cj0MKTw8TcRTzPNxxRUqZLbipZKGPS/wrJGyJP7m6GNz0Gp4U9hbe8cu8d5b/gf8XAM/SkMUwF10v4sLFguRujgT8QscEizDwEiaCI07MH38D8TBzu7IOAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=3a21f105c30ed2108dbc32f1b401318d"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=3a21f105c30ed2108dbc32f1b401318d^sys_idNOT IN06662d91c38e16108dbc32f1b401315f,42662d91c38e16108dbc32f1b401315d"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">42662d91c38e16108dbc32f1b401315f</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Batch Install Updates">3a21f105c30ed2108dbc32f1b401318d</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned>progress_id,status_message</outputs_assigned>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-11-22 15:24:14</sys_created_on>
+        <sys_id>06662d91c38e16108dbc32f1b401315f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:18</sys_updated_on>
+        <ui_id>a5b9fc24-afea-43f1-b076-d464652b9bc7</ui_id>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8FYFnS9DLevgWIAgQoGmKJs2lKASKXNlEKVEhKSeu4X/vUpbjJGiKtO6xN3PI5cwOd+QtUYPtB2tu1ZkxYtmRxdctEZwsSF1mWczLiCUFRFkUFrxmSdxEdRpGSZRSMiMdbQFP9lotNRhTYd2MrKkcHLrdhkmclWE+94s8Bz+FKPGLglG/YFkcpfM4iXIWPCve7bCcC9NLurk77Ra2EpJrcO18m5GealRqQZPF9tWW3fRQSVqDRLIbq0W3xPL3GnAo/DTRe5fnb9niiBA0BwqludMTzQg8Wug4IGVDpYEZaWnHqVV684RooPy6k0dgJTr7ktdTjWdX4D0o/R00/qTWE8bjCummVWcslZI4gkcjfqCcIgxDd3sDaAhz+kbvlGBw3Vuhuj1iaS0Pm0oObfdx36F7LmjoIO3huRAZDFQceteS0zgJbm5W6uHzgehCdGP306ZUjMqnFbXoUT1YMO65BnH7yrk98uH1m4GEFhmrlvY9IhXavxYjC4pug6XERdBI9YDq3KQHlLkOA7SaBheIn4/wHdXCtXuF12Cxo/vSifsBLt1M4EgwmnPu83mS+Gldpn4R1o0/T+OsScs8T7KM7EZLq/vBNbU3abKj2juKBwzTordnKGENU+e72ZS8Ivvt4MFxxPBB7WCqFkeALuHPw/ey/oT8/eKifxHBdzhxLHQKvKsnK96y6I0gxicF8Xr8inoTi9do1Y5prKllq0PyQAf/w3dC+JokbWp8d39eh9RPc4rhy+LSD9M0TJqS13xO/zp8OIiic/+E+6FcT0qmJQcmDAq+ddjls3N8g3Mm2HPIfYFdq0ds9xOzehggZwcAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">46662d91c38e16108dbc32f1b401315c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Batch Install Updates">3a21f105c30ed2108dbc32f1b401318d</flow>
+        <flow_variables_assigned>batch_manifest</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-11-22 15:24:14</sys_created_on>
+        <sys_id>42662d91c38e16108dbc32f1b401315d</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:18</sys_updated_on>
+        <ui_id>a72ff676-01cb-4409-bcc9-9c337a9bb842</ui_id>
+        <values>H4sIAAAAAAAA/+1XW2/aMBT+K5GfQFwUrqX0qVNVqdPaSmvXlwZFxjkBr46d2g6MIf77jmMCtGJVp72Sl8Tn9n3n49gWa6IKmxfWPKpLY/hMkvHzpEm4dDb8XhNJMyBjMqWWzeOMSp6CsaRJFlQUzoGfCTe5oKunvYXNuUg0bKvlVGMRC5qM1+9cdpVDLOgUBCZ+fbi/w2Se4PeIDofd5LzDeiPoDDvhKJmyXjftTPthp9cZ9DGuSvviqAW3e2p/o+zA0P7TKIkrpRPHKGwS+GVBJoCwKRUGmgRzEmqVXu0sGmhyL8XeMOfS+l4z+svw31i4H4ahi0wB22M7JRRncJ9bjqClxdKpqJxKFJm883SdkJDSQtgDIQsDcQK5o+fwtuDpw1wtv1dA11yWnWydQjEqditqrebTwoJx4hf88Y0Gfv3trf4gIEM0VC7PuZzFuVYLXiIg4aw9E7hop0ItkZkbmTZlrrs2Skbb12i/Ks1PVHPX6i2WwWQH9kPy1wJu3O/b6w/CsN/tt0aMha3+NB21RgM2bZ2fJ2e9kPbOBkMgm1LO+LVwDXmBtlLEXk0MMEzz3F4ihQU2ZnUBlc01/G4G0PJRPA61DnK6EoomQVSEYc+/umfrqJyqiIyDiDzgaEBwmeeBH70baSwVAnREmuiWCtX2kVsPqhjQBeXC6YEAmAQmSLXKAjuHoKznc3PKXujMpz976ItIOlpCqbziFKJtifsIamkSl7LHnTjGiJe4yGMNDGfbtKu3xPmu1euRjeQ6kgE+PK25co2GLwhBWPeOrd89lQyNNzo0d5xczMa/joeiZDzxMnhD0Ag+Q3cGfgPUfJZRhWYQ4xDFWK401YPGFsOL5va1B8IowRl141i6DskeZxkRZ8RJzlRJzdXxWwfLacBxNRaSeAHalEX/t52q0LFGPsP2YLj+lcbVwTFdO4Te7JDxBz0OPNnHaLCFlhXBC7LZbCbuOvC73V8a5RH+wUl8ujxOl8fp8jhdHqfL43R5TNzOZNw19uhG/Kb67+EcK9w4nB2alkq/uPNjb9v8AVsy7+TFDAAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=3a21f105c30ed2108dbc32f1b401318d"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=3a21f105c30ed2108dbc32f1b401318d^sys_idNOT IN8a662d91c38e16108dbc32f1b4013154"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=json,uiTypeLabel=JSON,uiUniqueId=34500424-8cc0-4bf8-85cb-99d730a3756e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>batch_manifest</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="JSON">json</internal_type>
+        <label>Batch Manifest</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Batch Install Updates">3a21f105c30ed2108dbc32f1b401318d</model>
+        <model_id>3a21f105c30ed2108dbc32f1b401318d</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_3a21f105c30ed2108dbc32f1b401318d</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-11-22 15:24:14</sys_created_on>
+        <sys_id>8a662d91c38e16108dbc32f1b4013154</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-11-22 15:24:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_3a21f105c30ed2108dbc32f1b401318d^sys_idNOT INb5662191c38e16108dbc32f1b4013177"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>apps</element>
+        <help/>
+        <hint>This is a list of sys_ids of apps to install</hint>
+        <label>Applications</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3a21f105c30ed2108dbc32f1b401318d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-11-22 15:24:14</sys_created_on>
+        <sys_id>b5662191c38e16108dbc32f1b4013177</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Batch Installer for Store Updates" source="x_23746_batch_in_0">11aba50dc3cad2108dbc32f1b4013123</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-11-22 15:24:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_3a21f105c30ed2108dbc32f1b401318d"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_3a21f105c30ed2108dbc32f1b401318d^sys_idNOT IN46662d91c38e16108dbc32f1b4013150,ca662d91c38e16108dbc32f1b401314d"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>status_message</element>
+        <help/>
+        <hint>Output message from the batch installer.</hint>
+        <label>Status Message</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_3a21f105c30ed2108dbc32f1b401318d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-11-22 15:24:14</sys_created_on>
+        <sys_id>46662d91c38e16108dbc32f1b4013150</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Batch Installer for Store Updates" source="x_23746_batch_in_0">11aba50dc3cad2108dbc32f1b4013123</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-11-22 15:24:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>progress_id</element>
+        <help/>
+        <hint>Progress ID of the worker that is doing that install</hint>
+        <label>Progress ID</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_3a21f105c30ed2108dbc32f1b401318d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-11-22 15:24:14</sys_created_on>
+        <sys_id>ca662d91c38e16108dbc32f1b401314d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Batch Installer for Store Updates" source="x_23746_batch_in_0">11aba50dc3cad2108dbc32f1b4013123</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-11-22 15:24:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_3a21f105c30ed2108dbc32f1b401318d"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>batch_install_updates</internal_name>
+        <label_cache>[{"name":"03269075-877e-4e13-88ca-8c621452317c.status_message","label":"3 - Batch Install➛Status Message","reference_display":"Status Message","type":"string","base_type":"string","usedInstances":{"a5b9fc24-afea-43f1-b076-d464652b9bc7":["status_message-1"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"565282e5-1ee6-4b04-9a6b-7a6d47a4da5b"}},{"name":"03269075-877e-4e13-88ca-8c621452317c.progress_id","label":"3 - Batch Install➛Progress ID","reference_display":"Progress ID","type":"string","base_type":"string","usedInstances":{"a5b9fc24-afea-43f1-b076-d464652b9bc7":["progress_id-0"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"93f6a70e-6c6b-4246-8d9a-b5bb1b1dee5d"}},{"name":"flow_variable.batch_manifest","label":"Flow Variables➛Batch Manifest","reference":"","reference_display":"","type":"json","base_type":"json","usedInstances":{"03269075-877e-4e13-88ca-8c621452317c":["batch_plan"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"34500424-8cc0-4bf8-85cb-99d730a3756e"}},{"name":"subflow.apps","label":"Input➛Applications","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"7bc855c3-e50f-4e00-9372-99ce90422b19":["conditions"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"989ef74b-150f-4dfd-8156-febc2ea0c514","sourceUiUniqueId":"","sourceType":"","sourceId":""}}]</label_cache>
+        <master>true</master>
+        <name>Batch Install Updates</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Batch Install Updates">3a21f105c30ed2108dbc32f1b401318d</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-12-03 20:54:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5c7b5b74c3da56508dbc32f1b401317b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:19</sys_updated_on>
+        <type>subflow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=5c7b5b74c3da56508dbc32f1b401317b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=5c7b5b74c3da56508dbc32f1b401317b"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_5c7b5b74c3da56508dbc32f1b401317b^id=5c7b5b74c3da56508dbc32f1b401317b"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=5c7b5b74c3da56508dbc32f1b401317b"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=5c7b5b74c3da56508dbc32f1b401317b^sys_idNOT IN107b5b74c3da56508dbc32f1b401317d"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>5c7b5b74c3da56508dbc32f1b401317b</id>
+        <name>Batch Install Updates</name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-12-03 20:54:19</sys_created_on>
+        <sys_id>107b5b74c3da56508dbc32f1b401317d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:19</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=107b5b74c3da56508dbc32f1b401317d"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=5c7b5b74c3da56508dbc32f1b401317b^sys_idNOT IN547b5b74c3da56508dbc32f1b401317e"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=989ef74b-150f-4dfd-8156-febc2ea0c514</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>apps</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Applications</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Batch Install Updates">5c7b5b74c3da56508dbc32f1b401317b</model>
+        <model_id>5c7b5b74c3da56508dbc32f1b401317b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_5c7b5b74c3da56508dbc32f1b401317b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-12-03 20:54:19</sys_created_on>
+        <sys_id>547b5b74c3da56508dbc32f1b401317e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=547b5b74c3da56508dbc32f1b401317e"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=5c7b5b74c3da56508dbc32f1b401317b^sys_idNOT INa07b5b74c3da56508dbc32f1b4013192,a07b5b74c3da56508dbc32f1b4013199"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=966ca7dd-d533-4b94-80bf-5426f4977366</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>progress_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Progress ID</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Batch Install Updates">5c7b5b74c3da56508dbc32f1b401317b</model>
+        <model_id>5c7b5b74c3da56508dbc32f1b401317b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_5c7b5b74c3da56508dbc32f1b401317b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-12-03 20:54:20</sys_created_on>
+        <sys_id>a07b5b74c3da56508dbc32f1b4013192</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a07b5b74c3da56508dbc32f1b4013192"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=f34fb131-5b0a-47a4-8629-04403f9dbd5a</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>status_message</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Status Message</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Batch Install Updates">5c7b5b74c3da56508dbc32f1b401317b</model>
+        <model_id>5c7b5b74c3da56508dbc32f1b401317b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_5c7b5b74c3da56508dbc32f1b401317b</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-12-03 20:54:20</sys_created_on>
+        <sys_id>a07b5b74c3da56508dbc32f1b4013199</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a07b5b74c3da56508dbc32f1b4013199"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5c7b5b74c3da56508dbc32f1b401317b"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=5c7b5b74c3da56508dbc32f1b401317b"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=5c7b5b74c3da56508dbc32f1b401317b^sys_idNOT IN6c7b5b74c3da56508dbc32f1b40131ac,e87b5b74c3da56508dbc32f1b40131ae"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Batch Install Updates">5c7b5b74c3da56508dbc32f1b401317b</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-12-03 20:54:20</sys_created_on>
+        <sys_id>6c7b5b74c3da56508dbc32f1b40131ac</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:20</sys_updated_on>
+        <ui_id>7bc855c3-e50f-4e00-9372-99ce90422b19</ui_id>
+        <values>H4sIAAAAAAAA/+VXTWvjMBD9K8FnE+wmTbu9lYZCoR/Qll5KEbIkJ2IV2SvJSdOQ/74jS3aM42YTSKFlj5oZSW9m3hvLr6uA0+AiOE+HUYTj0/OzKBoMomg0GhAcJ8lgRJIoGSZBGEg8YxBpcCIYLOdYFHatlxrhPEdzpjTPJHgo17nAyxcfcJnnghNswNl7qYPIlAuqmAwuXt/CIMcKTjdMBRerlmtfeAInTEDos8fXgmuWeb1Epc/ZbpvbevfOkSlqoURhwN4Nk5QBhhQLzcJghiXFJlPL2qIYpg9SbAxTLg2cGNjgd80/4N7zyMalDLIizPnqZXnz2NXMudIxNvjJqIKYQvlwMs04YdrVhLIUF8JcNW0u4CG3dXZbXOpudyaKmbx3JQnqA6oWgaXQDFGW22Qtep9K+jTNFo8V0msuy7p4p8gIFvUKG6N4UhiLZxUwwWZwEJoBNbicoFxlc15uBiyz/kTAop+KbAGXaj6RfUws8D7UFvevwT4uzS9YcZvFHRwDmwEQF8AS5Nqos0KV5ZwjIgpdOhSW2p0VrENLziuBtd5kDmVHfwqL29XBZ4xc0ewWonhuLuGIOfPJrcO9VHIabWhHMkm5RaFbUuH05n610kVik+9DWnq93tbMjshjCqdEXAnnqgm5Kw0voS3bbdcBXkLx0SQEefw0EcHl309Dh6vCleAf0iBnO4l2uuGUzpRBrpYNbfiR3NKBtx7G+T2gVJx/sCztJcvP0HnKp5wJ2vXVuLaO1lfj5P/9anxLwgMgilwHuRRcls8AAPpVSoh2j9xfLa6VFGt8I6wNa7KtBdwzWe/jYDXsAadSwxPc3Xt2eDogVvO/pEx79ldGL4LB0UQwODmeCFZ1qnUxO+pevf5sR6v4DxuP2/FAw8aGeN0lsoPujA+982S9LeLBQSpuEs55xp/w7shPxE9UGX7lGJjCVn8fchpGC04nzGxur6JoZhZY/O7ye2GiqlFlel/w3BzulO4o3sgU1IIU09C85nszhifT9hyJQ2c+bIzsgaUqxx1+7z3WYDoR+lECameTsjfNWXJTWz3Jh0d8RH7rL2rVsE4dVn37EX9qxxPD21/LlrjGoxAAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Batch Install">89f446ebc3031010ca199a038a40dd7b</action_type>
+        <action_type_parent display_value="Batch Install">468535e3c3031010ca199a038a40dd3d</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>89f446ebc3031010ca199a038a40dd7b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Batch Install Updates">5c7b5b74c3da56508dbc32f1b401317b</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-12-03 20:54:20</sys_created_on>
+        <sys_id>e87b5b74c3da56508dbc32f1b40131ae</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:20</sys_updated_on>
+        <ui_id>03269075-877e-4e13-88ca-8c621452317c</ui_id>
+        <values>H4sIAAAAAAAA/+2WW2/bNhTHv4qhpw21XEqibu5TliBAhq4J4jYvTSFQvNgcaEqlKCee4e++I0uW7dyWAEaAYXvk0SH5P5cfj76vHMmcsYOZwDjiOQ1Q4CEPUeKlKUFBQjBiLKbO0NFkzsEzJ5bOslIRDbYFUXVjXK2EKu6yBTGS5IqPWqc50VLwyq7X4MpkBZuWN6/fQWdSMcO1M/7+Y+iUxIAAy40zXj349NoIFMm5AtffmrsGV20IT4Vll2Vj+7MqtqvP3dbfJ5dfwFQY1gjxhg6/t1wzDgoEURUfOhACI7YwS2dsTQ0Gwwm71GrZe8yktnCU0/jeV/IvuAojhBpPwSEoytuv/fJrk6GzNn/tJ3FGLJnA+dTWpnOns0JSXrUpYVyQWtnTfVvrcFlaCWFtttjm4G53oeq5/tImw+kP2JYLLHXFM8bLJtpGfxeMmMyKu+ut0nOpN4npPqqCEtWviLVG5rVt9KycWn49yHK7fpBnrvgcboO+KEupp1lpioXc3ACC56OpgsVo00iMV3KqR4Q20Y2gAmR0Dvazjfmm67I/4BjY3Fz2TcufNb9oOicKcYq9lLhhSrmLfT91kyiOXBIjTyRhmqZ54qyHTrWsThWpql2SoELZz7oJsU1Zl5yszW+zhRpZ2hMQteB9Hlpjk4O9poPVE87r9XrYEYpe7O/E37UyNbxRIYnKiJKk2uOU8zxhcYxowEgYhShhcJ4vvBwjL/C8/DGn95kfxDjKWqlSZ2hEJWUZdIN5M6OviGHL6GkfxOCkC+L58Dped/wcQnu9Z+/I9Y9FbuAfcgtN0st6DuDTQmu+adTBbY2QHw0eRsur40O+r+wdaBcTTgydnUuumtJD/Z99AfbrdvgM7FfuXd6CNPG9KPeoCxPDc3HMIzfFHLl+LpgQoUej2D/eW7CDO30RDLLrfqkrSyAhWW3UHtiPwX07nP+sYQvnRSdi8O3687PSOigrKLmePiBysjV2OAbHwjH5Dw/SPtOHDPW5fheAQpKLlMa5m1JMXIx97BIvwC4MUZL6KIBZQ48CUNsTu1l60H2PpumhN2BjBtsNmzc4YINpNZpye2UKiMouf9m8zHF/atPjrenXT7facGgXeL2dmbVlNf748dYZfNid+AG+jGBALqBNXF3cjSC/4PLJ2ZvneZLC2I09JHDgA27cj0MKTw8TcRTzPNxxRUqZLbipZKGPS/wrJGyJP7m6GNz0Gp4U9hbe8cu8d5b/gf8XAM/SkMUwF10v4sLFguRujgT8QscEizDwEiaCI07MH38D8TBzu7IOAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=5c7b5b74c3da56508dbc32f1b401317b"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=5c7b5b74c3da56508dbc32f1b401317b^sys_idNOT INa87b5b74c3da56508dbc32f1b40131aa,a87b5b74c3da56508dbc32f1b40131ab"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">46662d91c38e16108dbc32f1b401315c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Batch Install Updates">5c7b5b74c3da56508dbc32f1b401317b</flow>
+        <flow_variables_assigned>batch_manifest</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-12-03 20:54:20</sys_created_on>
+        <sys_id>a87b5b74c3da56508dbc32f1b40131aa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:20</sys_updated_on>
+        <ui_id>a72ff676-01cb-4409-bcc9-9c337a9bb842</ui_id>
+        <values>H4sIAAAAAAAA/+1XS28aMRD+KyufQDy0BEhIckqDIqVqGqmkuWSjlbFnwY2xN7aXhCL+e8fr5ZGIVql66YG9LP48j28+j3fEkujC5YWzd/rCWjFR5OzhsUmE8hj+XhLByRkhTaLoDPDXmDo2TWdUiQysQ3xOZQHBhAubS7q43yJsKiQ3UEXNqcEgDgw5W77bKrMM6PHxET/tsO4AOsedeMDHrHuUdca9uNPt9HsYUNIxSDT95GlEN1sav6PnFrnHf1itqtWXKsTn0e1XhLThnlDcJPDqQHFAJhmVFpoEw3DqtFlsEAOU3yq5BaZCuVDqjL5a8RNz9eI49pYZYHWsEmKzvKNjCcMgVNjKhtTRkTMFc4XZ6KYFAxu04ZDRQrrLXSwY3OZOYF2li/OBK28ti5n6GhQhmwA751JYSDnkvlzPvyomG031y7c10yuhSmWqTakZlZsVdc6IceE8nyUpxN0bmcP6ndAgYYbZ8HDyXKhJmhs9F2UGJDxrTyQu2pnUL8jMd2KbMl9dG4+Atq8QH5bwPTXCl3qDYdDZJ/uuxHMB176Fur1+HPeOeq0BY3GrN84GrUGfjVunp/ykG9PuSf8YyKpJ7MJeSmrtViQ8ofS58CUGySpx0qCvd2FG5O4CSc3RBc8L1piX4F3jIfIne7w1JsrpQmrKo6SI4254HZ0sk7KVE3IWJWSEzQfRRZ5Hod+vlXVUSjAJaeK20qh/sKx2UNeIzqmQXiFMgE5go8zoWeSmEJXxgm9O2ROdBPeHkPo8UZ6W1Dpfc4oRe8GLCrWMp+VBpJ00RYuntMhTAwxvj22v3wpvUK1eT1yilomK8BFZzYdrNEJAiOJ62Kj2/bOWofFGh+aGk7dZhdd+U5RM8CBDAKJG9BG6EwhXoha8rC4MgxTbKsVwJVSPGlWOIJr/fIREaCUFo75By61dsvtZJsSD2NszXVLzccJlwnAGsIGtA57Owdgy6L+Wsw60r5CPsN1prr+lMdyZA7Xd1KtNZjzQ/YkftzYG8IOo1gTPyWq1evTzJtz/w3Q6TKfDdDpMp8N0Okyn/2c6cWDCF1Z+SK/X/6L8xgIvjmC70Is2T/6LssVWvwB/39b2jw0AAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">42662d91c38e16108dbc32f1b401315f</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Batch Install Updates">5c7b5b74c3da56508dbc32f1b401317b</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned>progress_id,status_message</outputs_assigned>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-12-03 20:54:20</sys_created_on>
+        <sys_id>a87b5b74c3da56508dbc32f1b40131ab</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:20</sys_updated_on>
+        <ui_id>a5b9fc24-afea-43f1-b076-d464652b9bc7</ui_id>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8FYFny9DLkuxbECNAgKQpmjSXojBWJGUToUSFpJy4hv+9S0t+pGmKBO6hh97EEXd3dnZHWhPV2qa15k6dGSPmNZl8WxPByIQU4zSN2Dikcc7DNAxyVtA4KsMiCcI4TIAMSA0Vx5uNVnPNjZlh3IAsQbYOXa+DOErHQTby8yzjfsLD2M9zCn5O0yhMRlEcZnR4FLzZYDgTppGwuj8tC10IyTR37XwfkAY0MrVckwk2V+NDDfJK1A9Y4NXl9zYvoeASr37uS3uX07cksavGgcZqUc/781UffrsDlWaOYDgg/NnymnHkUYI0fEAqqBlYpVd7RHNgN7U8AAts6yUZT5WeXXDvSekHrvERrCeMxxSW60+1sSAlcQWejfiBHPMgCFz2kqMelHf67I93UEg+7QbUvSqnYAFbaKltNd/JqQTlplOT8RJaac+Pse7CTWOFqrsQ6xL30Uq2Vf2pk5HsE+z2AZHW8BnjjZPI9dwLUN4u1NOXHdMLUW/V7F9KRUHuT2BR86K1js+atOLul/F0yKsBcckrrDiroGkQmeGMl2JbBUlXw7nEw7CU6gnZOSsNgboOhzg6GF4gPt3C96CFa/ca02CwK/e1Fo8tv3SLh3tHIWPMZ6M49pNinPh5UJT+KInSMhlnWZymZDMgZmXOJRhzEAqnNHtsXZudbL1As05jF0K1aOwZklryXovNoDd7nv5x3/lhs3FlbGtmFS4ZzPnH/f4y/gTL/ybRqa5/hwpyvxWuune9l+EteT7i/egk799sv+ReX9ortaq2H4ACLF3szM718L/f/yG/l3FSFrhc/qgIwE8yQL+n0dgPkiSIyzEr2Aj+ot/dptfuf99NZtlz2w+PCoMtbOd+eXSPrXC9BT2G3G/FNX/ANj8BOaOEo00IAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=5c7b5b74c3da56508dbc32f1b401317b"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=5c7b5b74c3da56508dbc32f1b401317b^sys_idNOT IN2c7b5b74c3da56508dbc32f1b40131a4"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=json,uiTypeLabel=JSON,uiUniqueId=34500424-8cc0-4bf8-85cb-99d730a3756e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>batch_manifest</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="JSON">json</internal_type>
+        <label>Batch Manifest</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Batch Install Updates">5c7b5b74c3da56508dbc32f1b401317b</model>
+        <model_id>5c7b5b74c3da56508dbc32f1b401317b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_5c7b5b74c3da56508dbc32f1b401317b</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-12-03 20:54:20</sys_created_on>
+        <sys_id>2c7b5b74c3da56508dbc32f1b40131a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_5c7b5b74c3da56508dbc32f1b401317b^sys_idNOT IN687b5b74c3da56508dbc32f1b401318d"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>apps</element>
+        <help/>
+        <hint>This is a list of sys_ids of apps to install</hint>
+        <label>Applications</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5c7b5b74c3da56508dbc32f1b401317b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-12-03 20:54:20</sys_created_on>
+        <sys_id>687b5b74c3da56508dbc32f1b401318d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Batch Installer for Store Updates" source="x_23746_batch_in_0">11aba50dc3cad2108dbc32f1b4013123</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_5c7b5b74c3da56508dbc32f1b401317b"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_5c7b5b74c3da56508dbc32f1b401317b^sys_idNOT INe87b5b74c3da56508dbc32f1b4013196,e87b5b74c3da56508dbc32f1b401319c"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>progress_id</element>
+        <help/>
+        <hint>Progress ID of the worker that is doing that install</hint>
+        <label>Progress ID</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_5c7b5b74c3da56508dbc32f1b401317b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-12-03 20:54:20</sys_created_on>
+        <sys_id>e87b5b74c3da56508dbc32f1b4013196</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Batch Installer for Store Updates" source="x_23746_batch_in_0">11aba50dc3cad2108dbc32f1b4013123</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>status_message</element>
+        <help/>
+        <hint>Output message from the batch installer.</hint>
+        <label>Status Message</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_5c7b5b74c3da56508dbc32f1b401317b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-12-03 20:54:20</sys_created_on>
+        <sys_id>e87b5b74c3da56508dbc32f1b401319c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Batch Installer for Store Updates" source="x_23746_batch_in_0">11aba50dc3cad2108dbc32f1b4013123</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_5c7b5b74c3da56508dbc32f1b401317b"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>3a21f105c30ed2108dbc32f1b401318d</sys_id>
+        <latest_snapshot>5c7b5b74c3da56508dbc32f1b401317b</latest_snapshot>
+        <compiler_build>glide-xanadu-07-02-2024__patch3-10-23-2024_11-01-2024_2230.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=3a21f105c30ed2108dbc32f1b401318d"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=3a21f105c30ed2108dbc32f1b401318d^sys_idNOT INbc7b5b74c3da56508dbc32f1b40131e0"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"bc7b5b74c3da56508dbc32f1b40131e0","name":"plan","plan_signature":null}}</plan>
+        <plan_id display_value="Batch Install Updates">3a21f105c30ed2108dbc32f1b401318d</plan_id>
+        <snapshot>558b5fb4c3da56508dbc32f1b40131bb</snapshot>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-12-03 20:54:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bc7b5b74c3da56508dbc32f1b40131e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-12-03 20:54:21</sys_updated_on>
+    </sys_flow_subflow_plan>
+</record_update>

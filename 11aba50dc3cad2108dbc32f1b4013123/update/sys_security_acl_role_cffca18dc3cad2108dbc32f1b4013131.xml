@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2024-11-21 21:14:30</sys_created_on>
+        <sys_id>cffca18dc3cad2108dbc32f1b4013131</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_23746_batch_in_0_st_available_update.x_23746_batch_in_0.available_update_user</sys_name>
+        <sys_package display_value="Batch Installer for Store Updates" source="x_23746_batch_in_0">11aba50dc3cad2108dbc32f1b4013123</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
+        <sys_security_acl display_value="x_23746_batch_in_0_st_available_update">0bfca18dc3cad2108dbc32f1b401312e</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_cffca18dc3cad2108dbc32f1b4013131</sys_update_name>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2024-11-21 21:14:30</sys_updated_on>
+        <sys_user_role display_value="x_23746_batch_in_0.available_update_user" name="x_23746_batch_in_0.available_update_user">22fc618dc3cad2108dbc32f1b40131c1</sys_user_role>
+    </sys_security_acl_role>
+</record_update>
