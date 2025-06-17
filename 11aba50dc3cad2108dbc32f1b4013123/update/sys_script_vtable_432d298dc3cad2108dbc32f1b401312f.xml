@@ -5,155 +5,119 @@
         <cache_isolation_level>USER</cache_isolation_level>
         <cache_strategy>CACHE_BY_QUERY</cache_strategy>
         <cache_ttl>0</cache_ttl>
+        <delete_script><![CDATA[(function executeDelete(v_record) {     // Parameters:     //      v_record - a map of field names and values containing (among others) the     //              sys_id of the record that needs to be deleted on the remote system     //          v_record.<field_name>                  - fields in the remote table GlideRecord     //          v_record.setLastErrorMessage(message)   - signal an error      // Sample code:     //  try {     //      update-external-system;     //      if (there-was-an-error) {     //          var message = ...;     //          v_record.setLastErrorMessage(message);     //      }     //  } catch (ex) {     //      var message = ex.getMessage();     //      v_record.setLastErrorMessage(message);     //  }  })(v_record);]]></delete_script>
+        <editable>false</editable>
         <enhanced_capacity>false</enhanced_capacity>
         <flow/>
+        <insert_script><![CDATA[(function executeInsert(v_record) {     // Parameters:     //      v_record is a map of field names and values containing the sys_id of the     //              record and the fields that need to be inserted in the record on the     //              remote system (source of data)          //          v_record.<field_name>                   - fields in the remote table GlideRecord     //          v_record.setLastErrorMessage(message)   - signal an error      // Sample code:     //  try {     //      update-external-system;     //      if (there-was-an-error) {     //          var message = ...;     //          v_record.setLastErrorMessage(message);     //      }     //  } catch (ex) {     //      var message = ex.getMessage();     //      v_record.setLastErrorMessage(message);     //  }  })(v_record);]]></insert_script>
         <name>Populate Available updates</name>
         <script><![CDATA[(function executeQuery(v_table, v_query) {
-      var res = {};
-      var versionLevel = {'major': 3, 'minor': 2, 'patch': 1, 'none': 0};
-      var versionLevelAscending = Object.keys(versionLevel).reverse();
+    var res = {};
 
-      var getAvailableVersion = function (appSysId)
-      {
-          var vers = [];
-          var v = new GlideRecord('sys_app_version');
-          v.addQuery('source_app_id', '=', appSysId);
-          v.orderBy('version');
-          v.query();
-          while(v.next())
-          {
-              vers.push({'sys_id': v.getUniqueValue(), 'name': v.getDisplayValue(), 'version': v.getValue('version'), 'publish_date': v.getValue('publish_date')});
-          }
-          return vers;
-      };
+    function getAvailableVersion(appSysId) {
+        var vers = [];
+        var v = new GlideRecord('sys_app_version');
+        v.addQuery('source_app_id', '=', appSysId);
+        v.orderByDesc('version');
+        v.query();
+        while (v.next()) {
+            vers.push({
+                'sys_id': v.getUniqueValue(),
+                'name': v.getDisplayValue(),
+                'version': v.getValue('version'),
+                'publish_date': v.getValue('publish_date')
+            });
+        }
+        return vers;
+    }
 
-      var compareVersion = function (currentVer, availableVer)
-      {
-          var currentVerParts = currentVer.split('.');
-          var availableVerParts = availableVer.split('.');
-          var diff = 'None';
+    function compareVersion(currentVer, availableVer) {
+        var current = currentVer.split('.').map(Number);
+        var available = availableVer.split('.').map(Number);
+        if (current[0] !== available[0]) return 'major';
+        if (current[1] !== available[1]) return 'minor';
+        if (current[2] !== available[2]) return 'patch';
+        return 'no';
+    }
 
-          if (currentVerParts[0] !== availableVerParts[0]) {
-              diff = 'Major';
-          } else if (currentVerParts[1] !== availableVerParts[1]) {
-              diff = 'Minor';
-          } else if (currentVerParts[2] !== availableVerParts[2]) {
-              diff = 'Patch';
-          } else {
-              diff = 'No';
-          }
-          return diff;
-      };
+    function isNewerVersion(v1, v2) {
+        var a = v1.split('.').map(Number);
+        var b = v2.split('.').map(Number);
+        for (var i = 0; i < 3; i++) {
+            if (a[i] > b[i]) return true;
+            if (a[i] < b[i]) return false;
+        }
+        return false;
+    }
 
-      var storeAppVer = new GlideRecord('sys_store_app');
-      storeAppVer.addQuery('active', '=', true);
-      storeAppVer.addQuery('update_available', '=', true);
-      storeAppVer.query();
+    var storeAppVer = new GlideRecord('sys_store_app');
+    storeAppVer.addQuery('active', '=', true);
+    storeAppVer.addQuery('update_available', '=', true);
+    storeAppVer.query();
 
-      // Create scan finding
-      while (storeAppVer.next())
-      {
-          var cur = storeAppVer.getUniqueValue();
-          var availVersion = getAvailableVersion(cur);
-          for(var v in availVersion)
-          {
-              var ver = availVersion[v];
-              var diff = compareVersion(storeAppVer.getValue('version'), ver.version).toLowerCase();
+    while (storeAppVer.next()) {
+        var appId = storeAppVer.getUniqueValue();
+        var installedVersion = storeAppVer.getValue('version');
+        var availableVersions = getAvailableVersion(appId);
 
-              if(res.hasOwnProperty(cur) == false)
-              {
-                var versionTemplate = {'sys_id': null, 
-                                        'application': null,
-                                        'level': null,
-                                        'available_version': null, 
-                                        'installed_version': null, 
-                                        'latest_major_version': null, 
-                                        'latest_minor_version': null, 
-                                        'latest_patch_version': null,
-                                        'major_count': 0,
-                                        'minor_count': 0,
-                                        'patch_count': 0};
-                res[cur] = {'major': Object.assign({}, versionTemplate), 'minor': Object.assign({}, versionTemplate), 'patch': Object.assign({}, versionTemplate), 'no': Object.assign({}, versionTemplate)};
-              }
-
-              res[cur][diff].sys_id = ver.sys_id;
-              res[cur][diff].application = cur;
-              res[cur][diff].level = diff;
-              res[cur][diff].available_version = ver.sys_id;
-              res[cur][diff].version = ver.version;
-              res[cur][diff].installed_version = storeAppVer.getValue('version');
-              if(diff == 'patch')
-              {
-                res[cur][diff].latest_patch_version = ver.sys_id;
-                res[cur][diff].latest_minor_version = ver.sys_id;
-                res[cur][diff].latest_major_version = ver.sys_id;
-              }
-              if(diff == 'minor')
-              {
-                res[cur][diff].latest_minor_version = ver.sys_id;
-                res[cur][diff].latest_major_version = ver.sys_id;
-              }
-              if(diff == 'major')
-              {
-                res[cur][diff].latest_major_version = ver.sys_id;
-              }
-
-              res[cur]['patch'].latest_version_level = diff;
-              res[cur]['minor'].latest_version_level = diff;
-              res[cur]['major'].latest_version_level = diff;
-
-              res[cur]['patch'][diff + '_count']++;
-              res[cur]['minor'][diff + '_count']++;
-              res[cur]['major'][diff + '_count']++;
-
-              res[cur][diff].name = storeAppVer.getDisplayValue() + ' - ' + ver.version;          
-          }
-      }
-
-      for(var app in res)
-      {
-        var lastLevel = res[app]['patch'];
-        for(var l in versionLevelAscending)
-        {
-            var levelCheck = versionLevelAscending[l];
-            if(l > 0)
-            {
-                if(gs.nil(res[app][levelCheck].application))
-                {
-                    //gs.addInfoMessage('checking - not set: ' + levelCheck);
-                    res[app][levelCheck] = lastLevel;
-                } else {
-                    //gs.addInfoMessage('checking - set: ' + levelCheck);
-                    lastLevel = res[app][levelCheck];
-                }
-            }
+        if (!res[appId]) {
+            res[appId] = {};
         }
 
-        for(var lev in res[app])
-        {
-            res[app][lev].batch_level = lev;
-            if(!gs.nil(res[app][lev].available_version))
-            {
-                v_table.addRow(res[app][lev]);
+        for (var i = 0; i < availableVersions.length; i++) {
+            var ver = availableVersions[i];
+            var level = compareVersion(installedVersion, ver.version);
+            if (level === 'no') continue;
+
+            if (!res[appId][level] || isNewerVersion(ver.version, res[appId][level].version)) {
+                res[appId][level] = {
+                    sys_id: ver.sys_id,
+                    application: appId,
+                    level: level,
+                    available_version: ver.sys_id,
+                    version: ver.version,
+                    installed_version: installedVersion,
+                    name: storeAppVer.getDisplayValue() + ' - ' + ver.version,
+                    batch_level: level,
+                    major_count: level === 'major' ? 1 : 0,
+                    minor_count: level === 'minor' ? 1 : 0,
+                    patch_count: level === 'patch' ? 1 : 0
+                };
             }
         }
     }
-  })(v_table, v_query);]]></script>
+
+    // Add all available levels (major, minor, patch) even if they point to same version
+    for (var app in res) {
+        var seenVersions = {};
+        for (var level of ['major', 'minor', 'patch']) {
+            var entry = res[app][level];
+            if (entry) {
+                var uniqueKey = entry.version + '-' + level;
+                if (!seenVersions[uniqueKey]) {
+                    v_table.addRow(entry);
+                    seenVersions[uniqueKey] = true;
+                }
+            }
+        }
+    }
+})(v_table, v_query);]]></script>
         <sys_class_name>sys_script_vtable</sys_class_name>
         <sys_created_by>nia.mccash</sys_created_by>
         <sys_created_on>2024-11-21 21:16:20</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>432d298dc3cad2108dbc32f1b401312f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Populate Available updates</sys_name>
         <sys_package display_value="Batch Installer for Store Updates" source="x_23746_batch_in_0">11aba50dc3cad2108dbc32f1b4013123</sys_package>
         <sys_policy/>
         <sys_scope display_value="Batch Installer for Store Updates">11aba50dc3cad2108dbc32f1b4013123</sys_scope>
         <sys_update_name>sys_script_vtable_432d298dc3cad2108dbc32f1b401312f</sys_update_name>
-        <sys_updated_by>nia.mccash</sys_updated_by>
-        <sys_updated_on>2024-11-21 21:16:20</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-17 18:09:08</sys_updated_on>
         <table>x_23746_batch_in_0_st_available_update</table>
+        <update_script><![CDATA[(function executeUpdate(v_record, v_changed_fields) {     // Parameters:     //    v_record - a map of field names and values containing the sys_id of the record     //          v_record.<field_name>                   - fields in the remote table GlideRecord     //          v_record.setLastErrorMessage(message)   - signal an error     //    v_changed_fields - a map of field names and values containing the sys_id of the     //          v_changed_fields.<field_name>           - changed fields in the remote table GlideRecord      // Sample code:     //  try {     //      update-external-system;     //      if (there-was-an-error) {     //          var message = ...;     //          v_record.setLastErrorMessage(message);     //      }     //  } catch (ex) {     //      var message = ex.getMessage();     //      v_record.setLastErrorMessage(message);     //  }  })(v_record, v_changed_fields);]]></update_script>
     </sys_script_vtable>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>432d298dc3cad2108dbc32f1b401312f</id>
